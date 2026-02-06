@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dan Hajiya Phones & Accessories</title>
+    <style>
+        :root {
+            --primary-color: #25d366; /* WhatsApp Green */
+            --dark: #1a1a1a;
+            --light: #f4f4f4;
+            --gold: #d4af37;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--light); color: #333; }
+        
+        /* Navigation */
+        nav { background: var(--dark); color: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--gold); }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-size: 14px; }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80'); 
+                height: 400px; background-size: cover; background-position: center; display: flex; flex-direction: column; 
+                justify-content: center; align-items: center; color: white; text-align: center; }
+        .hero h1 { font-size: 45px; margin: 0; }
+        .hero p { font-size: 18px; margin-top: 10px; color: var(--gold); }
+
+        /* Product Section */
+        .container { padding: 40px 10%; }
+        .section-title { text-align: center; margin-bottom: 30px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s; text-align: center; padding-bottom: 20px; }
+        .card:hover { transform: translateY(-10px); }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card h3 { margin: 15px 0 5px; }
+        .card p { color: #666; font-size: 14px; padding: 0 10px; }
+        .price { color: var(--dark); font-weight: bold; font-size: 18px; display: block; margin: 10px 0; }
+
+        /* WhatsApp Button */
+        .btn-whatsapp { background-color: var(--primary-color); color: white; padding: 10px 20px; border: none; border-radius: 25px; 
+                         text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-whatsapp:hover { background-color: #128c7e; }
+
+        /* Floating WhatsApp Button */
+        .floating-wa { position: fixed; bottom: 20px; right: 20px; background: var(--primary-color); color: white; 
+                       width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; 
+                       align-items: center; font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; z-index: 1000; }
+
+        footer { background: var(--dark); color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Dan Hajiya Phones</div>
+    <div class="nav-links">
+        <a href="#phones">Wayoyi</a>
+        <a href="#accessories">Na'urori</a>
+        <a href="#contact">Tuntuba</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Dan Hajiya Phones</h1>
+    <p>Ingantattun Wayoyi da Accessories a Farashi Mai Sauki</p>
+</div>
+
+<div class="container" id="phones">
+    <h2 class="section-title">Wayoyi Masu Kyau</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=500&q=60" alt="iPhone">
+            <h3>iPhone 15 Pro</h3>
+            <p>Sabuwa ful, mai kyau da inganci.</p>
+            <span class="price">Kira don Farashi</span>
+            <a href="https://wa.me/2348130546543?text=Ina%20son%20iPhone%2015%20Pro" class="btn-whatsapp">Yi Magana a WhatsApp</a>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=500&q=60" alt="Samsung">
+            <h3>Samsung S24 Ultra</h3>
+            <p>Kyamara mai kyau da batir mai karfi.</p>
+            <span class="price">Kira don Farashi</span>
+            <a href="https://wa.me/2348130546543?text=Ina%20son%20Samsung%20S24" class="btn-whatsapp">Yi Magana a WhatsApp</a>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1546054454-aa26e2b734c7?auto=format&fit=crop&w=500&q=60" alt="Other Phones">
+            <h3>Sauran Wayoyi</h3>
+            <p>Muna da Infinix, Techno, da sauransu.</p>
+            <span class="price">Farashi Mai Rahusa</span>
+            <a href="https://wa.me/2348130546543?text=Ina%20son%20karin%20bayani%20akan%20wayoyinku" class="btn-whatsapp">Tambaya a WhatsApp</a>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="accessories" style="background: #ececec; max-width: 100%;">
+    <h2 class="section-title">Accessories</h2>
+    <div class="grid" style="max-width: 80%; margin: auto;">
+        <div class="card">
+            <h3>Chargers & Cables</h3>
+            <p>Original chargers masu saurin caji.</p>
+            <a href="https://wa.me/2348130546543" class="btn-whatsapp">Order Yanzu</a>
+        </div>
+        <div class="card">
+            <h3>Airpods & Headsets</h3>
+            <p>Sauti mai dadi da inganci.</p>
+            <a href="https://wa.me/2348130546543" class="btn-whatsapp">Order Yanzu</a>
+        </div>
+        <div class="card">
+            <h3>Smart Watches</h3>
+            <p>Agogo na zamani masu kyan gani.</p>
+            <a href="https://wa.me/2348130546543" class="btn-whatsapp">Order Yanzu</a>
+        </div>
+    </div>
+</div>
+
+<a href="https://wa.me/2348130546543" class="floating-wa" target="_blank">
+    <i>WA</i>
+</a>
+
+<footer>
+    <p>&copy; 2024 Dan Hajiya Phones & Accessories. All Rights Reserved.</p>
+    <p>WhatsApp: +234 813 054 6543</p>
+</footer>
+
+</body>
+</html>
